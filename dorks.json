@@ -1,0 +1,19 @@
+{
+    "basic": [
+        "site:{domain}",
+        "intitle:\"index of\" \"parent directory\" {domain}",
+        "filetype:pdf site:{domain}",
+        "inurl:admin site:{domain}",
+        "intitle:login site:{domain}",
+        "cache:{domain}"
+    ],
+    "advanced": [
+        "inurl:\"/phpinfo.php\" {domain}",
+        "inurl:\"/admin.php\" {domain}",
+        "intitle:\"Network Camera\" {domain}",
+        "intitle:\"sensitive data\" site:{domain}",
+        "filetype:xls OR filetype:xlsx \"sensitive data\" {domain}",
+        "\"powered by vbulletin\" site:{domain}",
+        "\"DB_PASSWORD\" filetype:env {domain}"
+    ]
+}

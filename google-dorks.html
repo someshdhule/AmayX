@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Dorks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Logo" class="logo">
+            <h1>AmayX Tools</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link">Commands</a>
+            <a href="google-dorks.html" class="nav-link">Google Dorks</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="intro-section">
+            <h2>Generate Google Dorks</h2>
+            <form id="dorkDomainForm" class="form">
+                <input type="text" id="dorkDomain" name="dorkDomain" placeholder="Enter target domain" required class="input">
+                <button type="submit" class="button">Generate</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h3>Google Dorks</h3>
+            <div class="dork-list" id="dorkList">
+                <!-- Google Dorks will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 AmayX Tools. All rights reserved.</p>
+    </footer>
+
+    <script src="dork-script.js"></script>
+</body>
+</html>

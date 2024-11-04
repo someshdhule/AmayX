@@ -1,0 +1,290 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(0,0,0,0.7)), url('assets/tech-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+    background: linear-gradient(90deg, #003366, #004d80, #00aaff);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #ffb84d;
+    transform: scale(1.05);
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 120px 20px 40px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #00cc99;
+    font-size: 1.8rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.input {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #00cc99, #3399ff);
+    color: #ffffff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #00b386, #287bcc);
+    transform: scale(1.05);
+}
+
+.results-section {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.command-list, .dork-list {
+    padding: 10px;
+}
+
+.command, .dork {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6f7ff;
+    color: #003366;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.copy-button {
+    padding: 6px 10px;
+    background: linear-gradient(90deg, #00cc99, #3399ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.copy-button:hover {
+    background: linear-gradient(90deg, #00b386, #287bcc);
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .main-content {
+        padding: 100px 15px 30px;
+    }
+
+    .intro-section, .results-section {
+        padding: 20px;
+    }
+}
+
+.copy-button {
+    background-color: #28a745; /* Success color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copy-button.copied {
+    background-color: #007bff; /* Change color on copy */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+.command {
+    position: relative;
+    margin: 10px 0;
+}
+
+.command-text {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.command-text:hover {
+    background-color: #e2e2e2; /* Slightly darker on hover */
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 200px; /* Adjust width as needed */
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the command */
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.command-text:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.command {
+    position: relative;
+    margin: 10px 0;
+}
+
+.command-text {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.command-text:hover {
+    background-color: #e2e2e2; /* Slightly darker on hover */
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 200px; /* Adjust width as needed */
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the command */
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.command-text:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.copy-bubble {
+    position: absolute;
+    background-color: #28a745; /* Green background */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    transition: opacity 0.3s, transform 0.5s;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
